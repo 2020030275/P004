@@ -7,7 +7,7 @@
 </head>
 
 <script>
-  $(document).ready(function() {
+  $(document).on("click", "#btnCargar", function() {
     fetch('https://jsonplaceholder.typicode.com/photos')
       .then(response => response.json())
       .then(data => {
@@ -22,18 +22,27 @@
               
           });
           });
-
-          $(document).on("click", ".preview-img", function() {
-          var imageUrl = $(this).attr("data-url");
-          $("#modal-img").attr("src", "/Captura hora.png");
-          $("#image-modal").modal("show");
-          });
   });
+
+  $(document).on("click", ".preview-img", function() {
+    var imageUrl = $(this).attr("data-url");
+    $("#modal-img").attr("src", "/Captura hora.png");
+    $("#image-modal").modal("show");
+    });
+
+  $(document).on("click", "#btnLimpiar", function() {
+    $('tbody').remove()
+
+  });
+  
+    
 </script>
 
 <body>
   <div class="container">
     <h1>JSON Data</h1>
+    <button type="button" class="btn btn-primary" id="btnCargar">Cargar Datos</button>
+    <button type="button" class="btn btn-danger" id="btnLimpiar">Limpiar Datos</button>
     <table class="table table-striped" id="data-table">
       <thead>
           <tr>

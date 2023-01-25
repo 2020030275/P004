@@ -22,6 +22,12 @@
               
           });
           });
+
+          $(document).on("click", ".preview-img", function() {
+          var imageUrl = $(this).attr("data-url");
+          $("#modal-img").attr("src", "/Captura hora.png");
+          $("#image-modal").modal("show");
+          });
   });
 </script>
 

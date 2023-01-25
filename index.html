@@ -14,7 +14,7 @@
           $.each(data, function(index, item) {
             var newRow = $("<tr>");
             var cols = "";
-            cols += '<td><img src="' + "/Captura hora.png" + '" class="img-thumbnail preview-img" data-url="' + "/Captura hora.png" + '" width="100" height="100" ></td>';
+            cols += '<td><img src="' +  item.thumbnailUrl + '" class="img-thumbnail preview-img" data-url="' + item.url + '" width="100" height="100" ></td>';
             cols += '<td>' + item.id + '</td>';
             cols += '<td>' + item.title + '</td>';
             newRow.append(cols);

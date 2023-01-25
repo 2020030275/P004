@@ -6,6 +6,38 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 </head>
 <body>
-    
+  <div class="container">
+    <h1>JSON Data</h1>
+    <table class="table table-striped" id="data-table">
+      <thead>
+          <tr>
+            <th scope="col">Imagen</th>
+            <th scope="col">Id</th>
+            <th scope="col">Titulo</th>
+          </tr>
+        </thead>
+      <tbody>
+      </tbody>
+    </table>
+
+    <div class="modal" tabindex="-1" role="dialog" id="image-modal">
+      <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content">
+          <div class="modal-body" id="image-modal-body">
+              <center>
+                  <img id="modal-img" alt="" width="600" height="600">
+              </center>
+              
+          </div>
+          <div class="modal-footer">
+              
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
 </body>
 </html>
